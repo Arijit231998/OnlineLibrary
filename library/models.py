@@ -8,7 +8,7 @@ from datetime import datetime,timedelta
 # Create your models here.
 class Book(models.Model):
     name = models.CharField(max_length=200)
-    author = models.CharField(max_length=200)
+    author = models.CharField(max_length=20)
     isbn = models. PositiveIntegerField()
     category=models.CharField(max_length=100)
 
