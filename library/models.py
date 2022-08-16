@@ -8,7 +8,7 @@ from datetime import datetime,timedelta
 # Create your models here.
 class Book(models.Model):
     name = models.CharField(max_length=200)
-    author = models.CharField(max_length=20)
+    author = models.CharField(max_length=200)
     isbn = models. PositiveIntegerField()
     category=models.CharField(max_length=100)
 
@@ -24,6 +24,9 @@ class Student (models.Model):
 def expire(){
     return str(self.user)+"[+str(self.branch)+']"
 }
-
+class IssuedBook(models.Model):
+    student_id= models.CharField(max_length=100,blank=True)
+    isbn=models.CharField(max_length=13)
+    issued_date=models.DateField(auto_now=True)
 
 
