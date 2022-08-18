@@ -20,13 +20,16 @@ class Student (models.Model):
         phone=models.CharField(max_length=11,blank=True)
         image= models.ImageField(upload_to="", blank=True)
        
+def __str__(self):
+    return str(self.user) + " ["+str(self.branch)+']' + " ["+str(self.classroom)+']' + " ["+str(self.roll_no)+']'
 
-def expire(){
+def expire():
     return str(self.user)+"[+str(self.branch)+']"
-}
+
 class IssuedBook(models.Model):
     student_id= models.CharField(max_length=100,blank=True)
     isbn=models.CharField(max_length=13)
     issued_date=models.DateField(auto_now=True)
+    expire_date=models.DateField(default=expire)
 
 
