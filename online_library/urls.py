@@ -21,4 +21,5 @@ urlpatterns = [
     path("",views.index, name="index"),
     path("add_book/",views.add_book,name="add_book"),
     path("view_books/",views.view_books, name="view_book"),
+     path("view_students/", views.view_students, name="view_students"),
 ]
