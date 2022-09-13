@@ -26,7 +26,7 @@ class Student (models.Model):
 def __str__(self):
     return str(self.user) + " ["+str(self.branch)+']' + " ["+str(self.classroom)+']' + " ["+str(self.roll_no)+']'
 
-def expire():
+def expirey():
     return str(self.user)+"[+str(self.branch)+']"
 
 class IssuedBook(models.Model):
