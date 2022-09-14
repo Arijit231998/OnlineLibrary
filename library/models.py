@@ -17,8 +17,8 @@ def __str__(self):
 
 class Student (models.Model):
         user= models.OneToOneField(User,on_delete=models.CASCADE)
-        classroom= models.CharField(max_length=40)
-        branch=models.CharField(max_length=40)
+        classroom= models.CharField(max_length=10,blank)
+        branch=models.CharField(max_length=10)
         roll_no= models.CharField(max_length=8,blank=True)
         phone=models.CharField(max_length=11,blank=True)
         image= models.ImageField(upload_to="", blank=True)
